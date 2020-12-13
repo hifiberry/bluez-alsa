@@ -189,7 +189,7 @@ static void set_transport_volume(struct pcm_worker *w) {
 	struct ba_pcm *ba_pcm = &w->ba_pcm;
 	uint16_t old = ba_pcm->volume.ch1_volume;
 
-	if (ba_pcm->flags & BA_PCM_FLAG_PROFILE_A2DP) {
+	if (ba_pcm->profile == BA_PCM_PROFILE_A2DP) {
 		double n_vol;
 		int volume;
 
